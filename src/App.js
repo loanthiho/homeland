@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import PropertyDetails from "./pages/PropertyDetails";
 import Login from "./components/login";
-import Register from "./components/SignUp";
+import Register from "./components/Signup";
 
 const App = () => {
   return (
