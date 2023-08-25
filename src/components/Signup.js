@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+
 export default function Register() {
   const navigate = useNavigate();
+
 
   const [formData, setFormData] = useState({
     name: "",
@@ -11,12 +13,14 @@ export default function Register() {
     password_confirmation: "",
   });
 
+
   const [errors, setErrors] = useState({
     name: "",
     email: "",
     password: "",
     password_confirmation: "",
   });
+
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -26,28 +30,36 @@ export default function Register() {
     }));
   };
 
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
+
     const newErrors = {};
+
 
     if (formData.name === "") {
       newErrors.name = "Please enter your name";
     }
 
+
     if (formData.email === "") {
       newErrors.email = "Please enter your email";
     }
+
 
     if (formData.password === "") {
       newErrors.password = "Please enter a password";
     }
 
+
     if (formData.password_confirmation === "") {
       newErrors.password_confirmation = "Please confirm your password";
     }
 
+
     setErrors(newErrors);
+
 
     if (Object.keys(newErrors).length === 0) {
       try {
@@ -58,6 +70,7 @@ export default function Register() {
           },
           body: JSON.stringify(formData),
         });
+
 
         if (response.ok) {
           // Redirect to login page after successful registration
@@ -70,6 +83,8 @@ export default function Register() {
       }
     }
   };
+
+
 
 
   return (

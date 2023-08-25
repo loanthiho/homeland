@@ -64,7 +64,7 @@ export default function Form({ setUser, setAuthState }) {
   };
 
   return (
-    <div className="flex flex-col items-center min-h-screen pt-3 sm:justify-center sm:pt-0h-full">
+    <div className="flex flex-col items-center min-h-screen pt-5 sm:justify-center sm:pt-0h-full">
       <div className="w-full px-6 py-6 mt-3 overflow-hidden bg-white shadow-md sm:max-w-lg sm:rounded-lg">
         <h1 className="text-3xl font-semibold">Welcome Login</h1>
         <p className="font-medium text-lg text-gray-500 mt-4">
